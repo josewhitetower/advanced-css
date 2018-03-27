@@ -8,6 +8,7 @@
     url(../img/hero.jpg);
     background-size: cover; /* to make it fix to the viewport */
     background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     position: relative;
     
