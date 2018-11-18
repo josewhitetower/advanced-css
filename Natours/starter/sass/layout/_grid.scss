@@ -1,10 +1,21 @@
 .row {
    max-width: $grid-width;
    margin: 0 auto;
+
    
    &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(tab-port){ //width < 900px
+        margin-bottom: $gutter-vertical-small;
+    }
    }
+
+   @include respond(tab-port){ //width < 900px
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+   
    @include clearfix;
 // starts whit: ^ , ends with: $, contains: *
    [class^="col-"] {
@@ -12,7 +23,12 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
-    }
+        }
+        @include respond(tab-port){ //width < 900px
+           width: 100% !important;
+           margin-right: 0;
+           margin-bottom: $gutter-vertical-small;
+        }
    }
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal})/ 2);

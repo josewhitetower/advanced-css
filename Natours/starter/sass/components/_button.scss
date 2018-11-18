@@ -49,6 +49,8 @@
             background-color: $color-primary;
         }
     }
+
+    //effect
     &:after {
         content: '';
         display: inline-block;

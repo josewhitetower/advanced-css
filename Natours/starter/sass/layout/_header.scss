@@ -11,6 +11,11 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     position: relative;
+
+    @include respond(tab-land) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
+    }
     
     &__logo-box{
         position: absolute;
