@@ -5,12 +5,28 @@
         to right bottom, 
        rgba( $color-primary-light, 0.8),
        rgba($color-primary-dark, 0.8)), 
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
     background-size: cover; /* to make it fix to the viewport */
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
     position: relative;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),// 600px/16
+            (min-width: 125em) { //2000px/16
+        background-image: linear-gradient( 
+            to right bottom, 
+           rgba( $color-secondary-light, 0.8),
+           rgba($color-secondary-dark, 0.8)), 
+        url(../img/hero.jpg);
+    }
+    // @media (min-width: 2000px) {
+    //     background-image: linear-gradient( 
+    //         to right bottom, 
+    //        rgba( $color-secondary-light, 0.8),
+    //        rgba($color-secondary-dark, 0.8)), 
+    //     url(../img/hero.jpg);
+    // }
 
     @include respond(tab-land) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
