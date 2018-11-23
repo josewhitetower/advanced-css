@@ -24,10 +24,10 @@
             right: 4rem;
         }
         @include respond(phone) {
-            // top: 2rem;
-            // right: 2rem;
-            top: 93%;
-            left: 43%;
+            top: 2rem;
+            right: 2rem;
+            // top: 90%;
+            // left: 43%;
         }
 
     }
@@ -48,10 +48,10 @@
             right: 4.5rem;
         }
         @include respond(phone) {
-            // top: 2.5rem;
-            // right: 2.5rem;
-            left: calc(43% + 5px);
-            top: calc(93% + 5px);
+            top: 2.5rem;
+            right: 2.5rem;
+            // left: calc(43% + 5px);
+            // top: calc(90% + 5px);
         }
     }
     &__nav {
