@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.9.0",
+    "autoprefixer": "^9.3.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
   }
 }

@@ -1,6 +1,6 @@
 
 .header {
-    height: 95vh; /* use only 955 of the viewport height*/
+    height: 85vh; /* use only 85 of the viewport height*/
     background-image: linear-gradient( 
         to right bottom, 
        rgba( $color-primary-light, 0.8),
@@ -8,11 +8,17 @@
     url(../img/hero-small.jpg);
     background-size: cover; /* to make it fix to the viewport */
     background-position: top;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
+   
     position: relative;
 
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 95vh; /* use only 955 of the viewport height*/
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* creates a clipping region that defines what part of an element should be displayed*/
+    }
+
     @media (min-resolution: 192dpi) and (min-width: 37.5em),// 600px/16
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), //safari support
             (min-width: 125em) { //2000px/16
         background-image: linear-gradient( 
             to right bottom, 
